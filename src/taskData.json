@@ -1,1 +1,148 @@
-{"tasks":[{"id":1,"Titel":"Einkaufsliste erstellen","Beschreibung":"Erstelle eine Einkaufsliste mit den benötigten Lebensmitteln für die Woche.","Erstellungsdatum":"2023-06-01","Erfüllungsdatum":"2023-06-03"},{"id":2,"Titel":"Wäsche waschen","Beschreibung":"Sortiere und wasche die schmutzige Wäsche.","Erstellungsdatum":"2023-06-02","Erfüllungsdatum":"2023-06-04"},{"id":3,"Titel":"Geburtstagsgeschenk besorgen","Beschreibung":"Kaufe ein passendes Geschenk für den Geburtstag deines Freundes.","Erstellungsdatum":"2023-06-03","Erfüllungsdatum":"2023-06-05"},{"id":4,"Titel":"Dokumente scannen","Beschreibung":"Scanne wichtige Dokumente ein und speichere sie digital ab.","Erstellungsdatum":"2023-06-04","Erfüllungsdatum":"2023-06-06"},{"id":5,"Titel":"Sport treiben","Beschreibung":"Mache eine halbstündige Joggingrunde im Park.","Erstellungsdatum":"2023-06-05","Erfüllungsdatum":"2023-06-07"},{"id":6,"Titel":"Hausputz machen","Beschreibung":"Reinige das Wohnzimmer, die Küche und das Badezimmer gründlich.","Erstellungsdatum":"2023-06-06","Erfüllungsdatum":"2023-06-08"},{"id":7,"Titel":"E-Mails beantworten","Beschreibung":"Gehe durch deine E-Mail-Inbox und beantworte alle ausstehenden Nachrichten.","Erstellungsdatum":"2023-06-07","Erfüllungsdatum":"2023-06-09"},{"id":8,"Titel":"Buch lesen","Beschreibung":"Lies die ersten fünf Kapitel eines Romans, den du schon lange lesen wolltest.","Erstellungsdatum":"2023-06-08","Erfüllungsdatum":"2023-06-10"},{"id":9,"Titel":"Kühlschrank reinigen","Beschreibung":"Leere den Kühlschrank, entsorge abgelaufene Lebensmittel und reinige ihn gründlich.","Erstellungsdatum":"2023-06-09","Erfüllungsdatum":"2023-06-11"},{"id":10,"Titel":"Freunde einladen","Beschreibung":"Plane eine kleine Zusammenkunft mit Freunden und lade sie ein.","Erstellungsdatum":"2023-06-10","Erfüllungsdatum":"2023-06-12"},{"id":11,"Titel":"Neues Rezept ausprobieren","Beschreibung":"Suche ein interessantes Rezept online und koche es zum Abendessen.","Erstellungsdatum":"2023-06-11","Erfüllungsdatum":"2023-06-13"},{"id":12,"Titel":"Blumen gießen","Beschreibung":"Gieße die Zimmerpflanzen und den Garten, um sie zu pflegen.","Erstellungsdatum":"2023-06-12","Erfüllungsdatum":"2023-06-14"},{"id":13,"Titel":"Dokumente organisieren","Beschreibung":"Sortiere und ordne wichtige Dokumente in deiner Ablage.","Erstellungsdatum":"2023-06-13","Erfüllungsdatum":"2023-06-15"},{"id":14,"Titel":"Yogaübungen machen","Beschreibung":"Führe eine Yoga-Session mit grundlegenden Übungen durch, um zu entspannen.","Erstellungsdatum":"2023-06-14","Erfüllungsdatum":"2023-06-16"},{"id":15,"Titel":"Fotogalerie erstellen","Beschreibung":"Sortiere deine Fotos, wähle die besten aus und erstelle eine digitale Fotogalerie.","Erstellungsdatum":"2023-06-15","Erfüllungsdatum":"2023-06-17"},{"id":16,"Titel":"Neue Playlist erstellen","Beschreibung":"Stelle eine abwechslungsreiche Playlist mit deiner Lieblingsmusik zusammen.","Erstellungsdatum":"2023-06-16","Erfüllungsdatum":"2023-06-18"},{"id":17,"Titel":"Kleiderschrank ausmisten","Beschreibung":"Gehe deinen Kleiderschrank durch, trenne dich von ungenutzter Kleidung und ordne ihn neu.","Erstellungsdatum":"2023-06-17","Erfüllungsdatum":"2023-06-19"},{"id":18,"Titel":"Tagesausflug planen","Beschreibung":"Plane einen Tagesausflug in eine nahegelegene Stadt oder Sehenswürdigkeit.","Erstellungsdatum":"2023-06-18","Erfüllungsdatum":"2023-06-20"},{"id":19,"Titel":"Neues Hobby ausprobieren","Beschreibung":"Finde ein neues Hobby oder eine neue Aktivität und probiere es aus.","Erstellungsdatum":"2023-06-19","Erfüllungsdatum":"2023-06-21"},{"id":20,"Titel":"Online-Kurs belegen","Beschreibung":"Melde dich für einen interessanten Online-Kurs an und beginne damit.","Erstellungsdatum":"2023-06-20","Erfüllungsdatum":"2023-06-22"},{},{}]}
+{
+    "tasks": [
+        {
+            "id": "fc481c92-8008-4872-ae36-a79392e3026c",
+            "User": "admin",
+            "Titel": "New Task",
+            "Beschreibung": "This is a new task",
+            "Erstelldatum": null,
+            "Erfülldatum": null
+        },
+        {
+            "id": "775710be-b7a9-425d-bc2c-f75fee4157c8",
+            "User": "admin",
+            "Titel": "New Task",
+            "Beschreibung": "This is a new task",
+            "Erstellungsdatum": "2023-06-10",
+            "Erfüllungsdatum": "2023-06-15"
+        },
+        {
+            "id": "6d895dd7-0ed6-4975-81f7-cb8154449334",
+            "User": "admin",
+            "Titel": "New Task",
+            "Beschreibung": "This is a new task",
+            "Erstellungsdatum": "2023-06-10",
+            "Erfüllungsdatum": "2023-06-15"
+        },
+        {
+            "id": "9cdf71b6-58c6-43fb-94d3-5541102f65ef",
+            "User": "admin",
+            "Titel": "New Task",
+            "Beschreibung": "This is a new task",
+            "Erstellungsdatum": "2023-06-10",
+            "Erfüllungsdatum": "2023-06-15"
+        },
+        {
+            "id": "dcfc48ad-704a-45d4-9d0e-5a1d431f69ca",
+            "User": "admin",
+            "Titel": "New Task",
+            "Beschreibung": "This is a new task",
+            "Erstellungsdatum": "2023-06-10",
+            "Erfüllungsdatum": "2023-06-15"
+        },
+        {
+            "id": "4e4a2638-acd8-4a91-b195-e675daafc5d3",
+            "User": "admin",
+            "Titel": "New Task",
+            "Beschreibung": "This is a new task",
+            "Erstellungsdatum": "2023-06-10",
+            "Erfüllungsdatum": "2023-06-15"
+        },
+        {
+            "id": "6ce8b467-b911-4d39-9605-808bb31e7923",
+            "User": "admin",
+            "Titel": "New Task",
+            "Beschreibung": "This is a new task",
+            "Erstellungsdatum": "2023-06-10",
+            "Erfüllungsdatum": "2023-06-15"
+        },
+        {
+            "id": "c4b6592e-1e19-4b9b-8725-5cec11d87d5f",
+            "User": "admin",
+            "Titel": "New Task",
+            "Beschreibung": "This is a new task",
+            "Erstellungsdatum": "2023-06-10",
+            "Erfüllungsdatum": "2023-06-15"
+        },
+        {
+            "id": "a8425052-95ad-4446-9389-e02b8980d104",
+            "User": "admin",
+            "Titel": "New Task",
+            "Beschreibung": "This is a new task",
+            "Erstellungsdatum": "2023-06-10",
+            "Erfüllungsdatum": "2023-06-15"
+        },
+        {
+            "id": "dfb236a4-7bfd-4663-846e-172adcc16d0d",
+            "User": "admin",
+            "Titel": "New Task",
+            "Beschreibung": "This is a new task",
+            "Erstellungsdatum": "2023-06-10",
+            "Erfüllungsdatum": "2023-06-15"
+        },
+        {
+            "id": "338d8928-cef3-4c6f-acd1-ed0bbd589e28",
+            "User": "admin",
+            "Titel": "New Task",
+            "Beschreibung": "This is a new task",
+            "Erstellungsdatum": "2023-06-10",
+            "Erfüllungsdatum": "2023-06-15"
+        },
+        {
+            "id": "00e114d0-3770-45b5-8f39-cf41ab258148",
+            "User": "admin",
+            "Titel": "New Task",
+            "Beschreibung": "This is a new task",
+            "Erstellungsdatum": "2023-06-10",
+            "Erfüllungsdatum": "2023-06-15"
+        },
+        {
+            "id": "bdb4136b-ea05-4c2a-b630-776ed5fcbefe",
+            "User": "user",
+            "Titel": "New Task by user",
+            "Beschreibung": "User shittbeschreibung",
+            "Erstellungsdatum": "2027-06-10",
+            "Erfüllungsdatum": "2027-06-15"
+        },
+        {
+            "id": "7349550c-8ae1-4088-ac79-c621acf987db",
+            "User": "user",
+            "Titel": "New Task by user",
+            "Beschreibung": "User shittbeschreibung",
+            "Erstellungsdatum": "2027-06-10",
+            "Erfüllungsdatum": "2027-06-15"
+        },
+        {
+            "id": "3f17ad87-a054-400b-87ef-42bbdd14ff36",
+            "User": "user",
+            "Titel": "New Task by user",
+            "Beschreibung": "User shittbeschreibung",
+            "Erstellungsdatum": "2027-06-10",
+            "Erfüllungsdatum": "2027-06-15"
+        },
+        {
+            "id": "a9b273c0-959c-4578-86a9-5da1f02393d2",
+            "User": "user",
+            "Titel": "New Task by user",
+            "Beschreibung": "User shittbeschreibung",
+            "Erstellungsdatum": "2027-06-10",
+            "Erfüllungsdatum": "2027-06-15"
+        },
+        {
+            "id": "c37c590d-4c18-407e-a1bf-3072bdbe8e84",
+            "User": "user",
+            "Titel": "New Task by user",
+            "Beschreibung": "User shittbeschreibung",
+            "Erstellungsdatum": "2027-06-10",
+            "Erfüllungsdatum": "2027-06-15"
+        },
+        {
+            "id": "fcdb9034-509e-4c9e-94a2-c83c2448c8a7",
+            "User": "user",
+            "Titel": "New Task by user",
+            "Beschreibung": "User shittbeschreibung",
+            "Erstellungsdatum": "2027-06-10",
+            "Erfüllungsdatum": "2027-06-15"
+        }
+    ]
+}

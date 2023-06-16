@@ -3,6 +3,7 @@ const app = express()
 const fs = require('fs')
 const session = require('express-session')
 const swaggerUi = require('swagger-ui-express')
+const { v4: uuidv4 } = require('uuid')
 
 const port = 3000
 const taskData = JSON.parse(fs.readFileSync('src/taskData.json', 'utf8'))
@@ -18,7 +19,9 @@ app.use(session({
   secret: 'supersecret',
   resave: false,
   saveUninitialized: true,
-  cookie: {}
+  cookie: {
+    maxAge: 60000
+  }
 }))
 
 const swaggerDocument = require('./swagger_output.json')
@@ -41,7 +44,7 @@ app.post('/login', (req, res) => {
 })
 
 app.get('/verify', (req, res) => {
-  if (req.session.user) {
+  if (req.session.user != null) {
     res.send(`User ${req.session.user} is logged in`)
   } else {
     res.status(401).send('User not logged in')
@@ -60,23 +63,25 @@ app.delete('/logout', (req, res) => {
 })
 
 app.get('/tasks', (req, res) => {
-  const id = req.query.id
-  if (id) {
-    const task = taskData.tasks.find((task) => task.id === id)
-    if (task) {
-      res.status(200).send(task)
-    } else {
-      res.status(404).send('Task was not found')
-    }
-  } else {
-    res.status(200).send(taskData)
+  if (req.session.user == null) {
+    return res.sendStatus(403)
   }
+  const tasks = taskData.tasks.filter((task) => task.User === req.session.user)
+  res.status(200).send(tasks)
 })
 
 app.get('/tasks/:id', (req, res) => {
+  if (req.session.user == null) {
+    return res.sendStatus(403)
+  }
+
   const taskId = req.params.id
-  // eslint-disable-next-line eqeqeq
-  const task = taskData.tasks.find((task) => task.id == taskId)
+  const task = taskData.tasks.find((task) => task.id === taskId)
+
+  if (req.session.user !== task.User) {
+    return res.sendStatus(403)
+  }
+
   if (task) {
     res.status(200).send(task)
   } else {
@@ -85,19 +90,39 @@ app.get('/tasks/:id', (req, res) => {
 })
 
 app.post('/tasks', (req, res) => {
-  const newTask = req.body
+  if (req.session.user == null) {
+    return res.sendStatus(403)
+  }
+  const newTask = {
+    id: uuidv4(),
+    User: req.session.user,
+    Titel: req.body.Titel ? req.body.Titel : null,
+    Beschreibung: req.body.Beschreibung ? req.body.Beschreibung : null,
+    Erstellungsdatum: req.body.Erstellungsdatum ? req.body.Erstellungsdatum : null,
+    Erfüllungsdatum: req.body.Erfüllungsdatum ? req.body.Erfüllungsdatum : null
+  }
+
   taskData.tasks.push(newTask)
   fs.writeFileSync('src/taskData.json', JSON.stringify(taskData))
-  res.status(201).send(newTask)
+  res.status(201).json(newTask)
 })
 
 app.put('/tasks/:id', (req, res) => {
+  if (req.session.user == null) {
+    return res.sendStatus(403)
+  }
+
   const taskId = req.params.id
   const updatedTask = req.body
   const taskIndex = taskData.tasks.findIndex((task) => task.id === taskId)
 
   if (taskIndex !== -1) {
-    taskData.tasks[taskIndex] = { ...taskData.tasks[taskIndex], ...updatedTask }
+    const task = taskData.tasks[taskIndex]
+    if (req.session.user !== task.User) {
+      return res.sendStatus(403)
+    }
+
+    taskData.tasks[taskIndex] = { ...task, ...updatedTask }
     fs.writeFileSync('src/taskData.json', JSON.stringify(taskData))
     res.status(200).send(taskData.tasks[taskIndex])
   } else {
@@ -106,13 +131,22 @@ app.put('/tasks/:id', (req, res) => {
 })
 
 app.delete('/tasks/:id', (req, res) => {
+  if (req.session.user == null) {
+    return res.sendStatus(403)
+  }
+
   const taskId = req.params.id
   const taskIndex = taskData.tasks.findIndex((task) => task.id === taskId)
 
   if (taskIndex !== -1) {
+    const task = taskData.tasks[taskIndex]
+    if (req.session.user !== task.User) {
+      return res.sendStatus(403)
+    }
+
     const deletedTask = taskData.tasks.splice(taskIndex, 1)
     fs.writeFileSync('src/taskData.json', JSON.stringify(taskData))
-    res.status(200).send(deletedTask[0])
+    res.status(200).send(`Task ${deletedTask[0].Titel} was successfully deleted`)
   } else {
     res.status(404).send('Task was not found')
   }
