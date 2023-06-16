@@ -51,10 +51,11 @@ For Testing a Postman collection is provided to use it, follow these steps:
 
 * Import m295_lbb.postman_collection.json into Postman
 * Run the collection
-* Note that the collection can **only be run once** with all checks passed because of unique IDs being created everytime you create a new task. If you want to test again you can manually input an object with following format:  
+* Note that the collection can **only be run once** with all checks passed because of unique IDs being created everytime you create a new task. If you want to test again you can manually input an object into src/taskData.json with following format:  
   {
     "id": "3b6b5d99-cc0b-4369-9f0c-df2145ac97f3",  
     "Titel": "New Task",  
+    "User": "admin",  
     "Beschreibung": "This is a new task",  
     "Erstellungsdatum": "2023-06-10",  
     "Erfüllungsdatum": "2023-06-15"
