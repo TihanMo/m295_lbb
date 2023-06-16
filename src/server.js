@@ -184,6 +184,8 @@ app.get('/tasks/:id', (req, res) => {
  *         description: Task created successfully
  *       403:
  *         description: Forbidden, user not logged in
+ *       406:
+ *         description: Missing required properties
  */
 app.post('/tasks', (req, res) => {
   if (req.session.user == null) {
