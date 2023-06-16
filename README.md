@@ -29,6 +29,12 @@ cd path/to/file/m295_lbb
 npm install
 ```
 
+## File Structure
+
+* `m295_lbb` This is the main project folder. Her you can also find all the config files and any other files that are needed for the project
+  * `src` This is the source folder of the API. It contains the main implementation of the application, as well as the swagger documentation and Data.
+    * `server.js` This is the main codebase for the API. It contains Routing and User handling etc. Normally these tasks are dicided into seperate files, but I've decided, that in the scope of this project it wasn't necessary.
+
 ## Using Task API
 
 To use Task API, follow these steps:
