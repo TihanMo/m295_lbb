@@ -191,13 +191,18 @@ app.post('/tasks', (req, res) => {
   }
 
   const { Titel, Beschreibung, Erstellungsdatum, Erfüllungsdatum } = req.body
+
+  if (!Titel || !Beschreibung || !Erstellungsdatum || !Erfüllungsdatum) {
+    return res.status(406).send('Missing required properties')
+  }
+
   const newTask = {
     id: uuidv4(),
     User: req.session.user,
-    Titel: Titel || null,
-    Beschreibung: Beschreibung || null,
-    Erstellungsdatum: Erstellungsdatum || null,
-    Erfüllungsdatum: Erfüllungsdatum || null
+    Titel,
+    Beschreibung,
+    Erstellungsdatum,
+    Erfüllungsdatum
   }
 
   taskData.tasks.push(newTask)
