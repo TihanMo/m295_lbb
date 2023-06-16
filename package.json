@@ -1,0 +1,35 @@
+{
+  "name": "m295_lbb",
+  "version": "1.0.0",
+  "description": "Prüfung des Moduls 295 \"Backend einer Applikation realisieren\"",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "swagger:generate" : "node swagger.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TihanMo/m295_lbb.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TihanMo/m295_lbb/issues"
+  },
+  "homepage": "https://github.com/TihanMo/m295_lbb#readme",
+  "dependencies": {
+    "nodemon": "^2.0.22",
+    "swagger-autogen": "^2.23.2"
+  },
+  "devDependencies": {
+    "eslint": "^8.0.1",
+    "eslint-config-standard": "^17.1.0",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-n": "^15.0.0 || ^16.0.0 ",
+    "eslint-plugin-promise": "^6.0.0",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^4.6.3"
+  }
+}
