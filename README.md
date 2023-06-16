@@ -62,8 +62,13 @@ For Testing a Postman collection is provided to use it, follow these steps:
 
 ## Additional Scripts
 
+This command runs the code linting, to check if the code is styled properly
 ```
 npm run lint
+```
+
+This command generates the Swagger Documentation, and is used whenever changes are made to the API
+```
 npm run swagger:generate
 ```
 
