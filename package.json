@@ -2,11 +2,11 @@
   "name": "m295_lbb",
   "version": "1.0.0",
   "description": "Prüfung des Moduls 295 \"Backend einer Applikation realisieren\"",
-  "main": "server.js",
+  "main": "src/server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js",
-    "swagger:generate" : "node swagger.js"
+    "start": "node src/server.js",
+    "swagger:generate" : "node src/swagger.js",
+    "lint": "eslint ."
   },
   "repository": {
     "type": "git",
